@@ -9,127 +9,148 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #2c3e50, #3498db);
-            color: #fff;
+            background: #f5f5f5;
+            color: #333;
         }
         header {
             padding: 20px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
+            text-align: left;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            text-align: center;
-            padding: 10px 0;
+            font-size: 1.5em;
+            color: #3498db;
         }
         nav a {
-            color: #fff;
+            color: #3498db;
             text-decoration: none;
             margin: 0 15px;
-            font-size: 1.2em;
+            font-size: 1em;
         }
         .container {
+            max-width: 1000px;
+            margin: 0 auto;
             padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .portfolio-section, .skills-section, .contact-section {
+        .profile {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+        .profile h2 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .profile p {
+            margin: 5px 0;
+            color: #777;
+        }
+        .skills, .portfolio, .contact {
             margin: 20px 0;
         }
-        h2 {
-            border-bottom: 2px solid #fff;
+        .skills h2, .portfolio h2, .contact h2 {
+            border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
         }
-        .portfolio-item, .skill-item {
+        .skills div, .portfolio div {
             margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
         }
-        .contact-info {
+        .skills div:hover, .portfolio div:hover {
+            background: #3498db;
+            color: #fff;
+        }
+        .contact ul {
             list-style: none;
             padding: 0;
         }
-        .contact-info li {
+        .contact ul li {
             margin: 10px 0;
+        }
+        .contact ul li a {
+            color: #3498db;
+            text-decoration: none;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        footer p {
-            margin: 0;
-        }
-        .futuristic-bg {
-            background: url('futuristic-image.jpg') no-repeat center center/cover;
-            padding: 50px 0;
-        }
-        .skills-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .skill-item {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            margin: 10px;
-            width: 200px;
-            text-align: center;
-            border-radius: 10px;
-            transition: background 0.3s;
-        }
-        .skill-item:hover {
-            background: rgba(255, 255, 255, 0.7);
-            color: #000;
+            background: #fff;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Jeevan Kumar T</h1>
+        <div>
+            <h1>Jeevan Kumar T</h1>
+            <p>Senior Data Engineer</p>
+        </div>
         <nav>
-            <a href="#portfolio">Portfolio</a>
             <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <div class="futuristic-bg">
-        <div class="container">
-            <section id="portfolio" class="portfolio-section">
-                <h2>Portfolio</h2>
-                <div class="portfolio-item">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 3</p>
-                </div>
-            </section>
-        </div>
-    </div>
-
     <div class="container">
-        <section id="skills" class="skills-section">
+        <div class="profile">
+            <img src="path/to/your/photo.jpg" alt="Jeevan Kumar T">
+            <div>
+                <h2>Jeevan Kumar T</h2>
+                <p>Senior Data Engineer with extensive experience in managing and optimizing data ecosystems, specializing in Hadoop, Python, and AWS.</p>
+            </div>
+        </div>
+
+        <section id="skills" class="skills">
             <h2>Skills</h2>
-            <div class="skill-item">Hadoop</div>
-            <div class="skill-item">Python</div>
-            <div class="skill-item">AWS EMR</div>
-            <div class="skill-item">SQL</div>
-            <div class="skill-item">Informatica</div>
-            <div class="skill-item">Teradata</div>
+            <div>Hadoop</div>
+            <div>Python</div>
+            <div>AWS EMR</div>
+            <div>SQL</div>
+            <div>Informatica</div>
+            <div>Teradata</div>
         </section>
 
-        <section id="contact" class="contact-section">
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div>
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+            </div>
+            <div>
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+            </div>
+            <div>
+                <h3>Project 3</h3>
+                <p>Description of Project 3</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
             <h2>Contact Information</h2>
-            <ul class="contact-info">
-                <li>Email: jeevantiru4@gmail.com</li>
+            <ul>
+                <li>Email: <a href="mailto:jeevantiru4@gmail.com">jeevantiru4@gmail.com</a></li>
                 <li>Phone: +1(940)268-3691</li>
-                <li>LinkedIn: <a href="http://www.linkedin.com/in/jeevan-kumar-t-6980912b7" style="color: #fff;">linkedin.com/in/jeevan-kumar-t-6980912b7</a></li>
+                <li>LinkedIn: <a href="http://www.linkedin.com/in/jeevan-kumar-t-6980912b7" target="_blank">linkedin.com/in/jeevan-kumar-t-6980912b7</a></li>
             </ul>
         </section>
     </div>
